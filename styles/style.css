@@ -94,7 +94,7 @@ ol {
   margin-left: 5px;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   border-bottom: 1px rgba(255, 255, 255, 1) solid;
   cursor: pointer;
 }
@@ -151,7 +151,7 @@ ol {
 
 .content__video-card-thumbnail {
   width:194px; 
-  object-fit: scale-down;
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
@@ -229,23 +229,20 @@ ol {
   display: flex;
   width: 19px;
   height: 19px;
-  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
   outline: 1px solid rgba(255, 255, 255, 1);
   outline-offset: -1px;
   margin-bottom:3px;
   cursor: pointer;
-  position:relative;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  align-self: center;
   content:"";
-  position:absolute;
   width: 15px;
   height: 15px;
   background-color: rgba(255, 255, 255, 1);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .search-form__label:has(.search-form__checkbox:focus) {
